@@ -1,0 +1,133 @@
+<html>
+<head>
+    <title>Portfolio websites</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="text/javascript">
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
+
+
+</script>
+
+
+<body>
+    <div class="brainbanner">
+        <div class="navbar">
+            <img src="Mark Icon.png"
+                 alt=""
+                 width="110"
+                 height="100">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Portfolio.html">Portfolio</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="title">
+            <h1>Videos</h1>
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+                <!-- Full-width images with number and caption text -->
+                <body onload="showSlides(1)">
+                </body>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 2</div>
+                    <video controls src="BrainstormPortfoliovid.mp4" height="500"></video>
+                    <div class="text">preview video</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 2</div>
+                    <video controls src="trailer.mp4" height="500"></video>
+                    <div class="text">second preview video</div>
+                </div>
+
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+
+
+        </div>
+
+        <div class="body" style="margin-bottom: -35%">
+            <ul>
+                <li>-Four man team</li>
+                <li>-My role in the team was an artist</li>
+                <li>-turned handdrawing from digital to pixel art</li>
+                <li>-First time working work trello boards</li>
+                <li>-Mass produced art under plenty of deadlines from the trello board</li>
+                <li>-Plenty of moments of consensus for things to be in the game</li>
+                <li>-learned and successfully applied cutting out things in the game to save time for more important things</li>
+                <li>-First time using PlasticScm</li>
+                <li>-First time making a trailer</li>
+                <li>-First time doing a post mortem</li>
+                <li>-Fun fact in the trailer im the voice heard immating the voice of the final boss</li>
+            </ul>
+
+
+
+
+
+        </div>
+        <div class="secondbody" style="margin-bottom: -65%">
+            <h1 style="font-size: 50px">Game Design Document & Post Mortem</h1>
+            
+            <ul>
+                <li><a href="Game Design Doc.pdf">BrainStorm Game Design Document</a></li>
+                <li><a href="Brainstorm Post Mortem.pdf">BrainStorm Post Mortem</a></li>
+            </ul>
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+</body>
+</html>
